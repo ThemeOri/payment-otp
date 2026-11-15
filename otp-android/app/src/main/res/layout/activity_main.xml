@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:fillViewport="true">
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="India Visa Auto Payment — OTP Relay"
+            android:textSize="18sp" android:textStyle="bold" android:paddingBottom="12dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="সার্ভার URL"/>
+        <EditText android:id="@+id/server" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:inputType="textUri" android:hint="https://sms2.wpcodify.com"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pair কোড (ব্রাউজারে একই)" android:paddingTop="10dp"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+            <EditText android:id="@+id/pair" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                android:inputType="textCapCharacters" android:hint="AB12CD"/>
+            <Button android:id="@+id/genPair" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="নতুন"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="App Key (সার্ভারে একই)" android:paddingTop="10dp"/>
+        <EditText android:id="@+id/appKey" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textPassword"/>
+
+        <CheckBox android:id="@+id/enabled" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="OTP ফরওয়ার্ড চালু" android:paddingTop="10dp"/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:paddingTop="8dp">
+            <Button android:id="@+id/save" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="সেভ"/>
+            <Button android:id="@+id/test" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="টেস্ট পাঠান"/>
+        </LinearLayout>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="লগ" android:textStyle="bold" android:paddingTop="14dp"/>
+        <TextView android:id="@+id/log" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:fontFamily="monospace" android:textSize="12sp" android:background="#11000000" android:padding="8dp"/>
+        <Button android:id="@+id/clearLog" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="লগ মুছুন" android:paddingTop="6dp"/>
+
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="টিপস: Settings এ গিয়ে এই অ্যাপের ব্যাটারি অপটিমাইজেশন বন্ধ রাখুন, যাতে পেছনে SMS ধরতে পারে।"
+            android:textSize="11sp" android:paddingTop="12dp" android:textColor="#777777"/>
+    </LinearLayout>
+</ScrollView>
